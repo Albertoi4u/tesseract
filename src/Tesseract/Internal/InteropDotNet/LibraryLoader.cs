@@ -211,4 +211,11 @@ namespace InteropDotNet
 
         #endregion
     }
+}internal static class Constants
+{
+    public const string LeptonicaDllName = "leptonica-1.85.0";
+    public const string TesseractDllName = "tesseract55";
+
+    public const int TRUE = 1;
+    public const int FALSE = 0;
 }
