@@ -16,7 +16,7 @@
     <RepositoryUrl>https://github.com/charlesw/tesseract/</RepositoryUrl>
     <PackageTags>Tesseract Ocr</PackageTags>
     <Version>5.5.2</Version>
-    <AssemblyVersion>5.2.0</AssemblyVersion>
+    <AssemblyVersion>5.5.2</AssemblyVersion>
     <NeutralLanguage></NeutralLanguage>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>

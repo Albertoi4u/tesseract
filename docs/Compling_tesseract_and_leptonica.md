@@ -2,7 +2,7 @@
 * [Index](./ReadMe.md)
 
 ## Notes
-Build instructions for Tesseract 4.1.1 and leptonica 1.80.0. Please note that build systems do change so while the following
+Build instructions for Tesseract 5.5.2 and leptonica 1.85.0. Please note that build systems do change so while the following
 has been tested with the listed versions building against any other versions including master may not work as expected and
 aren't supported.
 
@@ -10,7 +10,7 @@ The following also differ from [[Compiling-Tesseract-and-Leptonica]] in that the
 The main benefit of this is that it's possible to compile tesseract against the leptonica dll rather than statically 
 linking leptonica into tesseract which increases file size (since the leptonica dll is still required). 
 
-1. Install Visual Studio 2022 
+1. Install Visual Studio 2026 
 2. Install CMake (ensure it's on your path)
 3. Install [vcpkg](https://github.com/Microsoft/vcpkg/) 
 	* Note: I also set an environment variable VCPKG_HOME to this directory and added it to path for convenience
@@ -21,7 +21,7 @@ linking leptonica into tesseract which increases file size (since the leptonica 
 	vcpkg install giflib:x86-windows-static libjpeg-turbo:x86-windows-static liblzma:x86-windows-static libpng:x86-windows-static tiff:x86-windows-static zlib:x86-windows-static
 	vcpkg install giflib:x64-windows-static libjpeg-turbo:x64-windows-static liblzma:x64-windows-static libpng:x64-windows-static tiff:x64-windows-static zlib:x64-windows-static
 	git clone https://github.com/DanBloomberg/leptonica.git & cd leptonica	
-	git checkout -b 1.82.0 1.82.0
+	git checkout -b 1.85.0 1.85.0
 	mkdir vs16-x86 & cd vs16-x86
 	cmake .. -G "Visual Studio 17 2022" -A Win32 -DSW_BUILD=OFF -DBUILD_SHARED_LIBS=ON -DCMAKE_TOOLCHAIN_FILE=%VCPKG_HOME%\scripts\buildsystems\vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x86-windows-static -DCMAKE_INSTALL_PREFIX=..\..\build\x86
 	cmake --build . --config Release --target install
@@ -36,7 +36,7 @@ linking leptonica into tesseract which increases file size (since the leptonica 
 	```	
 	git clone https://github.com/tesseract-ocr/tesseract.git
 	cd tesserct
-	git checkout -b 5.2.0 5.2.0
+	git checkout -b 5.5.2 5.5.2
 	mkdir vs17-x86 & cd vs17-x86
 	cmake .. -G "Visual Studio 17 2022" -A Win32 -DAUTO_OPTIMIZE=OFF -DSW_BUILD=OFF -DBUILD_TRAINING_TOOLS=OFF -DCMAKE_INSTALL_PREFIX=..\..\build\x86
 	cmake --build . --config Release --target install
